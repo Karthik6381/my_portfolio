@@ -1,0 +1,129 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Visual */
+.about-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.about-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 4px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+  max-width: 380px;
+  width: 100%;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+}
+
+.about-card-inner {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.code-block {
+  background: #0d1117;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.code-dots {
+  display: flex;
+  gap: 6px;
+  padding: 12px 16px;
+  background: #161b22;
+}
+
+.code-dots span {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+}
+
+.code-dots span:nth-child(1) { background: #ff5f56; }
+.code-dots span:nth-child(2) { background: #ffbd2e; }
+.code-dots span:nth-child(3) { background: #27c93f; }
+
+.code-text {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: #c9d1d9;
+  padding: 16px 20px 20px;
+  white-space: pre;
+}
+
+/* Text */
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.about-text p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.about-text strong {
+  color: var(--text-primary);
+}
+
+/* Stats */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 8px 0;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 8px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.stat-card:hover {
+  border-color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 800;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
